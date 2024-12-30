@@ -10,6 +10,8 @@ app.use(express.json());
 
 app.use(cors());
 
+app.get("/health" , (req, res) => res.send("Healthy"));
+
 
 app.use("/", seatRoutes);
 app.use("/", auth);   
